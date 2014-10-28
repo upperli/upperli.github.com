@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>upperli</title><link href="/" rel="alternate"></link><link href="/feeds/tui-jian-suan-fa.atom.xml" rel="self"></link><id>/</id><updated>2010-12-03T10:20:00-05:00</updated><entry><title>推荐系统中的矩阵分解技术（译）</title><link href="/blog/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95001" rel="alternate"></link><updated>2010-12-03T10:20:00-05:00</updated><author><name>Yehuda Koren,  Yahoo Research</name></author><id>tag:,2010-12-03:blog/推荐算法001</id><summary type="html">&lt;p&gt;Robert Bell and Chris Volinsky,  AT&amp;amp;T Labs—Research
+LCY（译）
+Summary: 推荐算法&lt;/p&gt;
+&lt;h1&gt;推荐系统中的矩阵分解技术（译）&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;正如 Netflix Prize 比赛所证明的，矩阵分解模型在产品推荐方面优于传统的邻域技术，这种模型允许结合像隐式反馈，时间影响和置信水平等额外的信息。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当代消费者面临着过量的选择。电子零售商和供应商提供了大量的产品选择，以及前所未有的机会来满足各种不同的需求和喜好。在消费者和最恰当的产品之间牵桥搭线是提高用户满意度和忠诚度的关键。因此，越来越多的零售商开始对&lt;strong&gt;推荐系统&lt;/strong&gt;感兴趣，这种系统能分析用户在产品中的兴趣来提供个性化的满足用户喜好的推荐。因为好的推荐系统能让用户体验上升一个层次，推荐系统已经成了像 Amazon.com 和 Netflix 等电子商务大佬网站中非常重要的一部分。&lt;/p&gt;
+&lt;p&gt;推荐系统对于娱乐产品像如电影，音乐和电视节目等的效果格外显著。许多消费者会观看相同的电影，每个消费者也可能去观看许多不同的电影。已经证明消费者愿意表明自己对电影的满意程度，所以哪个用户喜欢哪部电影这样的数据是大量的并且是可获得的。公司可以分析这些数据来给特定的用户推荐电影。&lt;/p&gt;
+&lt;h2&gt;推荐系统策略&lt;/h2&gt;
+&lt;p&gt;广泛的讲，推荐系统主要基于两种策略之一。&lt;strong&gt;内容过滤&lt;/strong&gt;方法为每个用户或者产品创建一个配置文件来描述它的本质。举个例子来说，一个电影的配置文件可能包含它的类型，参与演员，票房等等属性。用户的配置文件可能包含户口资料信息或者对于恰当问卷的调查信息。这些配置文件允许程序将用户和产片关联起来。当然，基于内容的策略需要集成的表面信息可能不那么容易收集甚至不可获得。&lt;/p&gt;
+&lt;p&gt;一个成功的内容过滤的案例是著名的 Music Genome Project ，这个项目被用于 Pandora.com 的网络音频服务。一个训练有素的音乐分析师为 Music Genome Project 上的每首歌曲的数以百计的显著音乐特征打分。这些属性不仅是一首歌的音乐特性，而且还是和理解听者音乐喜好的有重大联系的特征品质。&lt;/p&gt;
+&lt;p&gt;相对于内容过滤的另一种可选择的方式是依赖用户的过去的行为，如以前的交易或者产品打分，这样就不需要创建明确的配置文件。这种方式被称作&lt;strong&gt;协同过滤&lt;/strong&gt; ---由第一个推荐系统的开发人员命名的术语。协同过滤分析用户和产品互赖之间的关系来确定新的用户--产品关联。&lt;/p&gt;
+&lt;p&gt;协同过滤算法的一个主要的吸引力是它在域间的开放，它能解决使用内容过滤通常难于理解和描述的数据问题。在比基于内容的技术更加精确的同时，协同过滤算法也有自己的问题，那就是&lt;strong&gt;冷启动&lt;/strong&gt;问题，因为它对系统的新产品和新用户无能为力。从这个角度讲，内容过滤要更胜一筹。&lt;/p&gt;</summary><category term="推荐算法，机器学习"></category></entry></feed>

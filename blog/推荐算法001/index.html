@@ -21,7 +21,7 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
 
-    <title>Quattro | upperli </title>
+    <title>推荐系统中的矩阵分解技术（译） | upperli </title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width">
 </head>
@@ -46,7 +46,7 @@
                             <li >
                                 <a href="/category/programming/">Programming</a>
                             </li>
-                            <li >
+                            <li class="active">
                                 <a href="/category/推荐算法/">推荐算法</a>
                             </li>
                     </ul>
@@ -60,11 +60,11 @@
 <article id="main">
 
   <header class="special container">
-    <span class="icon fa-bomb"></span>
-    <h2>Quattro</h2>
+    <span class="icon fa-"></span>
+    <h2>推荐系统中的矩阵分解技术（译）</h2>
     <!-- add page sub title here -->
-    <p>Posted on 2014-02-01T10:35:00Z by LCY</p>
-    <p>bomb</p>
+    <p>Posted on 2010-12-03T10:20:00Z by Yehuda Koren,  Yahoo Research</p>
+    <p></p>
   </header>
 
   <!-- One -->
@@ -74,19 +74,24 @@
         <div class="content">
           <section>
             <!-- <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a> -->
-            <h3>Posted in <a href="/category/blog/">blog</a></h3>
+            <h3>Posted in <a href="/category/tui-jian-suan-fa/">推荐算法</a></h3>
             <p class="tags">
+                <a href="/tag/tui-jian-suan-fa-ji-qi-xue-xi/">推荐算法，机器学习</a>
 </p>
-            <p><p>This should probably have something else...</p>
-<p>Let's test some syntax highlighting:</p>
-<div class="highlight"><pre><span class="nd">@hosts</span><span class="p">(</span><span class="n">production</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">publish</span><span class="p">():</span>
-    <span class="n">local</span><span class="p">(</span><span class="s">&#39;pelican -s publishconf.py&#39;</span><span class="p">)</span>
-    <span class="p">)</span>
-</pre></div>
-
-
-<p>Why didn't the damn icon show up.</p></p>
+            <p><p>Robert Bell and Chris Volinsky,  AT&amp;T Labs—Research
+LCY（译）
+Summary: 推荐算法</p>
+<h1>推荐系统中的矩阵分解技术（译）</h1>
+<blockquote>
+<p>正如 Netflix Prize 比赛所证明的，矩阵分解模型在产品推荐方面优于传统的邻域技术，这种模型允许结合像隐式反馈，时间影响和置信水平等额外的信息。</p>
+</blockquote>
+<p>当代消费者面临着过量的选择。电子零售商和供应商提供了大量的产品选择，以及前所未有的机会来满足各种不同的需求和喜好。在消费者和最恰当的产品之间牵桥搭线是提高用户满意度和忠诚度的关键。因此，越来越多的零售商开始对<strong>推荐系统</strong>感兴趣，这种系统能分析用户在产品中的兴趣来提供个性化的满足用户喜好的推荐。因为好的推荐系统能让用户体验上升一个层次，推荐系统已经成了像 Amazon.com 和 Netflix 等电子商务大佬网站中非常重要的一部分。</p>
+<p>推荐系统对于娱乐产品像如电影，音乐和电视节目等的效果格外显著。许多消费者会观看相同的电影，每个消费者也可能去观看许多不同的电影。已经证明消费者愿意表明自己对电影的满意程度，所以哪个用户喜欢哪部电影这样的数据是大量的并且是可获得的。公司可以分析这些数据来给特定的用户推荐电影。</p>
+<h2>推荐系统策略</h2>
+<p>广泛的讲，推荐系统主要基于两种策略之一。<strong>内容过滤</strong>方法为每个用户或者产品创建一个配置文件来描述它的本质。举个例子来说，一个电影的配置文件可能包含它的类型，参与演员，票房等等属性。用户的配置文件可能包含户口资料信息或者对于恰当问卷的调查信息。这些配置文件允许程序将用户和产片关联起来。当然，基于内容的策略需要集成的表面信息可能不那么容易收集甚至不可获得。</p>
+<p>一个成功的内容过滤的案例是著名的 Music Genome Project ，这个项目被用于 Pandora.com 的网络音频服务。一个训练有素的音乐分析师为 Music Genome Project 上的每首歌曲的数以百计的显著音乐特征打分。这些属性不仅是一首歌的音乐特性，而且还是和理解听者音乐喜好的有重大联系的特征品质。</p>
+<p>相对于内容过滤的另一种可选择的方式是依赖用户的过去的行为，如以前的交易或者产品打分，这样就不需要创建明确的配置文件。这种方式被称作<strong>协同过滤</strong> ---由第一个推荐系统的开发人员命名的术语。协同过滤分析用户和产品互赖之间的关系来确定新的用户--产品关联。</p>
+<p>协同过滤算法的一个主要的吸引力是它在域间的开放，它能解决使用内容过滤通常难于理解和描述的数据问题。在比基于内容的技术更加精确的同时，协同过滤算法也有自己的问题，那就是<strong>冷启动</strong>问题，因为它对系统的新产品和新用户无能为力。从这个角度讲，内容过滤要更胜一筹。</p></p>
           </section>
         </div>
 
@@ -151,7 +156,7 @@
       <h2 class="space-above">Comments</h2>
       <div id="disqus_thread"></div>
       <script type="text/javascript">
-          var disqus_identifier = "blog/quattro";
+          var disqus_identifier = "blog/推荐算法001";
           (function() {
               var dsq = document.createElement('script');
               dsq.type = 'text/javascript';
