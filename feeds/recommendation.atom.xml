@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>upperli</title><link>/</link><description></description><atom:link href="/feeds%5Cyehuda-koren-yahoo-research.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 03 Dec 2010 10:20:00 -0500</lastBuildDate><item><title>推荐系统中的矩阵分解技术（译）</title><link>/blog/recommendation001</link><description>&lt;p&gt;Robert Bell and Chris Volinsky,  AT&amp;amp;T Labs—Research
+<feed xmlns="http://www.w3.org/2005/Atom"><title>upperli</title><link href="/" rel="alternate"></link><link href="/feeds/recommendation.atom.xml" rel="self"></link><id>/</id><updated>2010-12-03T10:20:00-05:00</updated><entry><title>推荐系统中的矩阵分解技术（译）</title><link href="/blog/recommendation001" rel="alternate"></link><updated>2010-12-03T10:20:00-05:00</updated><author><name>Yehuda Koren,  Yahoo Research</name></author><id>tag:,2010-12-03:blog/recommendation001</id><summary type="html">&lt;p&gt;Robert Bell and Chris Volinsky,  AT&amp;amp;T Labs—Research
 LCY（译）
 Summary: 推荐算法&lt;/p&gt;
 &lt;h1&gt;推荐系统中的矩阵分解技术（译）&lt;/h1&gt;
@@ -12,4 +12,4 @@ Summary: 推荐算法&lt;/p&gt;
 &lt;p&gt;广泛的讲，推荐系统主要基于两种策略之一。&lt;strong&gt;内容过滤&lt;/strong&gt;方法为每个用户或者产品创建一个配置文件来描述它的本质。举个例子来说，一个电影的配置文件可能包含它的类型，参与演员，票房等等属性。用户的配置文件可能包含户口资料信息或者对于恰当问卷的调查信息。这些配置文件允许程序将用户和产片关联起来。当然，基于内容的策略需要集成的表面信息可能不那么容易收集甚至不可获得。&lt;/p&gt;
 &lt;p&gt;一个成功的内容过滤的案例是著名的 Music Genome Project ，这个项目被用于 Pandora.com 的网络音频服务。一个训练有素的音乐分析师为 Music Genome Project 上的每首歌曲的数以百计的显著音乐特征打分。这些属性不仅是一首歌的音乐特性，而且还是和理解听者音乐喜好的有重大联系的特征品质。&lt;/p&gt;
 &lt;p&gt;相对于内容过滤的另一种可选择的方式是依赖用户的过去的行为，如以前的交易或者产品打分，这样就不需要创建明确的配置文件。这种方式被称作&lt;strong&gt;协同过滤&lt;/strong&gt; ---由第一个推荐系统的开发人员命名的术语。协同过滤分析用户和产品互赖之间的关系来确定新的用户--产品关联。&lt;/p&gt;
-&lt;p&gt;协同过滤算法的一个主要的吸引力是它在域间的开放，它能解决使用内容过滤通常难于理解和描述的数据问题。在比基于内容的技术更加精确的同时，协同过滤算法也有自己的问题，那就是&lt;strong&gt;冷启动&lt;/strong&gt;问题，因为它对系统的新产品和新用户无能为力。从这个角度讲，内容过滤要更胜一筹。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yehuda Koren,  Yahoo Research</dc:creator><pubDate>Fri, 03 Dec 2010 10:20:00 -0500</pubDate><guid>tag:,2010-12-03:blog/recommendation001</guid><category>推荐算法，机器学习</category></item></channel></rss>
+&lt;p&gt;协同过滤算法的一个主要的吸引力是它在域间的开放，它能解决使用内容过滤通常难于理解和描述的数据问题。在比基于内容的技术更加精确的同时，协同过滤算法也有自己的问题，那就是&lt;strong&gt;冷启动&lt;/strong&gt;问题，因为它对系统的新产品和新用户无能为力。从这个角度讲，内容过滤要更胜一筹。&lt;/p&gt;</summary><category term="推荐算法，机器学习"></category></entry></feed>
