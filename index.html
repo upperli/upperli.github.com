@@ -1,306 +1,312 @@
-    <!-- Banner -->
-      <section id="banner">
-
-        <!--
-          ".inner" is set up as an inline-block so it automatically expands
-          in both directions to fit whatever's inside it. This means it won't
-          automatically wrap lines, so be sure to use line breaks where
-          appropriate (<br />).
-        -->
-        <div class="inner">
-
-          <header>
-            <h2>TWENTY</h2>
-          </header>
-          <p>This is <strong>Twenty</strong>, a free<br />
-          responsive template<br />
-          by <a href="http://html5up.net">HTML5 UP</a>.</p>
-          <footer>
-            <ul class="buttons vertical">
-              <li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
-            </ul>
-          </footer>
-
-        </div>
-
-      </section><html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.dropotron.min.js"></script>
-    <script src="/js/skel.min.js"></script>
-    <script src="/js/skel-layers.min.js"></script>
-    <script src="/js/init.js"></script>
-    <link rel="stylesheet" href="/css/pygment.css" />
-    <noscript>
-        <link rel="stylesheet" href="/css/skel.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/style-noscript.css" />
-    </noscript>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link  href="http://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="LCY" />
+        <meta name="description" content="">
 
-    <title>upperli </title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width">
+    <title>Welcome - upperli</title>
+
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    
+    <link href="/theme/css/pelican-twitchy.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="upperli ATOM Feed"/>
 </head>
-
-<body class="index loading">
-
-
-
-    <!-- Header -->
-    <header id="header" class="alt">
-        <h1 class="logo">
-            <a href="">upperli, design Twenty <span> by html5 up</span></a>
-        </h1>
-        <nav id="nav">
-            <ul>
-                <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/portfolio">Portfolio</a></li>
-                <li class="submenu">
-                    <a href="/blog">Blog</a>
-                    <ul>
-                            <li >
-                                <a href="/category/programming/">Programming</a>
-                            </li>
-                            <li >
-                                <a href="/category/recommendation/">recommendation</a>
-                            </li>
-                    </ul>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href="" title="upperli" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="/blog" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
                 </li>
-                <li><a href="#" class="button special">Sign Up</a></li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="http://github.com/upperli" title="github"><i class="fa fa-github-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        <div id="sidebar-wrapper">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            upperli
+                    </a>
+                </li>
+                    <li>
+                        <a href="/blog">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Social
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="http://github.com/upperli" title="github">
+                            <i class="fa fa-github-square fa-lg padding-small"></i>
+                            github
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="/about">
+                            <i class="fa fa-file-text padding-small"></i>
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/portfolio">
+                            <i class="fa fa-file-text padding-small"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li >
+                        <a href="/category/blog/">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            blog
+                            <span class="badge pull-right categorybadge">4</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/category/programming/">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            Programming
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/category/recommendation/">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            recommendation
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
 
-<!-- Main -->
-<article id="main">
-
-  <header class="special container">
-    <span class="icon fa-bar-chart-o"></span>
-    <h2>As this is my <strong>twentieth</strong> freebie for HTML5 UP<br />
-    I decided to give it a really creative name.</h2>
-    <p>Turns out <strong>Twenty</strong> was the best I could come up with. Anyway, lame name aside,<br />
-    it's minimally designed, fully responsive, built on HTML5/CSS3/<strong>skel</strong>,
-    and, like all my stuff,<br />
-    released for free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0</a> license. Have fun!</p>
-  </header>
-
-  <!-- One -->
-  <section class="wrapper style2 container special-alt">
-    <div class="row half">
-      <div class="8u">
-
-        <header>
-          <h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
-        </header>
-        <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
-        <footer>
-          <ul class="buttons">
-            <li><a href="#" class="button">Find Out More</a></li>
-          </ul>
-        </footer>
-
-      </div>
-      <div class="4u skel-cell-important">
-
-        <ul class="feature-icons">
-          <li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
-          <li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
-          <li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
-          <li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
-          <li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
-          <li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
-        </ul>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Two -->
-  <section class="wrapper style1 container special">
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content" class="body">
     <div class="row">
-
-      <div class="4u">
-
-        <section>
-          <span class="icon feature fa-pied-piper-alt"></span>
-          <header>
-            <a href="/blog/seriously-wtform" rel='bookmark'><h3>Seriously WTForm</h3></a>
-          </header>
-          <p>I'm about neck deep into a large Flask application. It's an MVP so no over the top Angular frontend or anything. Means I'm using a lot of WTForm to get user input... Means I'm saying <st</p>
-          <footer>
-              <ul class="buttons">
-                  <li><a href="/blog/seriously-wtform" class="button small">Read More</a></li>
-              </ul>
-          </footer>
-        </section>
-
-      </div>
-      <div class="4u">
-
-        <section>
-          <span class="icon feature fa-automobile"></span>
-          <header>
-            <a href="/blog/my-first-article" rel='bookmark'><h3>My First Article</h3></a>
-          </header>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascet</p>
-          <footer>
-              <ul class="buttons">
-                  <li><a href="/blog/my-first-article" class="button small">Read More</a></li>
-              </ul>
-          </footer>
-        </section>
-
-      </div>
-      <div class="4u">
-
-        <section>
-          <span class="icon feature fa-building"></span>
-          <header>
-            <a href="/blog/the-second-article" rel='bookmark'><h3>The Second Article</h3></a>
-          </header>
-          <p>This should probably have something else... Let's test some syntax highlighting: @hosts(pro</p>
-          <footer>
-              <ul class="buttons">
-                  <li><a href="/blog/the-second-article" class="button small">Read More</a></li>
-              </ul>
-          </footer>
-        </section>
-
-      </div>
-
-    </div> <!-- /.row -->
-
-
-<div class="row ">
-
-    <div class="4u pagination-left">
-        <section>
-            <header>
-                &nbsp;
-            </header>
-        </section>
+        <div class="col-lg-12">
+            <div class="jumbotron">  
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Welcome - upperli</h1>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="4u pagination-middle">
-        <section>
-            <header>Page 1 / 2</header>
-        </section>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Latest Articles:</h2>
+        </div>
     </div>
-
-    <div class="4u pagination-right">
-        <section>
-            <header>
-                <a href="/index2.html">Older posts&nbsp;&rarr;</a>
-            </header>
-        </section>
-    </div>
-
-</div>
-
-
-  </section> <!-- /section -->
-
-</article>
-
-<!-- Three -->
-<section class="wrapper style3 container special">
-
-  <header class="major">
-    <h2>Next look at this <strong>cool stuff</strong></h2>
-  </header>
-
-  <div class="row">
-    <div class="6u">
-
-      <section>
-        <a href="#" class="image feature"><img src="images/pic01.jpg" alt="" /></a>
-        <header>
-          <h3>A Really Fast Train</h3>
-        </header>
-        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-      </section>
-
-    </div>
-    <div class="6u">
-
-      <section>
-        <a href="#" class="image feature"><img src="images/pic02.jpg" alt="" /></a>
-        <header>
-          <h3>An Airport Terminal</h3>
-        </header>
-        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-      </section>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="6u">
-
-      <section>
-        <a href="#" class="image feature"><img src="images/pic03.jpg" alt="" /></a>
-        <header>
-          <h3>Hyperspace Travel</h3>
-        </header>
-        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-      </section>
-
-    </div>
-    <div class="6u">
-
-      <section>
-        <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a>
-        <header>
-          <h3>And Another Train</h3>
-        </header>
-        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-      </section>
-
-    </div>
-  </div>
-
-  <footer class="major">
-    <ul class="buttons">
-      <li><a href="#" class="button">See More</a></li>
-    </ul>
-  </footer>
-
-</section><!-- CTA -->
-<section id="cta">
-
-    <header>
-        <h2>Ready to do <strong>something</strong>?</h2>
-        <p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
-    </header>
-    <footer>
-        <ul class="buttons">
-            <li><a href="#" class="button special">Take My Money</a></li>
-            <li><a href="#" class="button">LOL Wut</a></li>
-        </ul>
-    </footer>
-
 </section>
+<div class="row">
+    <div class="col-lg-12">
+            <article>
+                <h2>
+                    <a href="/blog/recommendation001">推荐系统中的矩阵分解技术（译）</a>
+                    <small>
+<footer class="post-info">
+    <div id="publish-info" class="publish-info-block">
+        <span class="published">
+            <i class="fa fa-calendar padding-small"></i><time datetime="2014-11-02T10:20:00"> 2014-11-02T10:20:00Z</time>
+        </span>
+        <span class="category">
+            <i class="fa fa-folder-open padding-small"></i><a href="/category/recommendation/">recommendation</a>
+        </span>
+        <span class="tags">
+            <i class="fa fa-tags padding-small"></i>
+            <a href="/tag/tui-jian-suan-fa-ji-qi-xue-xi/">推荐算法，机器学习</a>        </span>
+    </div>
+</footer><!-- /.post-info -->                    </small>
+                </h2>
+                <div class="summary">
+                    <p>As the Netflix Prize competition has dem-onstrated,  matrix  factorization  models are  superior  to  classic  nearest-neighbor techniques  for  producing  product  recom-mendations,  allowing  the  incorporation of additional information such as implicit feedback, temporal effects, and confidence levels.</p>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2>
+                    <a href="/blog/seriously-wtform">Seriously WTForm</a>
+                    <small>
+<footer class="post-info">
+    <div id="publish-info" class="publish-info-block">
+        <span class="published">
+            <i class="fa fa-calendar padding-small"></i><time datetime="2014-06-28T10:42:00"> 2014-06-28T10:42:00Z</time>
+        </span>
+        <span class="category">
+            <i class="fa fa-folder-open padding-small"></i><a href="/category/programming/">Programming</a>
+        </span>
+    </div>
+</footer><!-- /.post-info -->                    </small>
+                </h2>
+                <div class="summary">
+                    <p>I'm about neck deep into a large Flask application. It's an MVP so no over the top
+Angular frontend or anything. Means I'm using a lot of WTForm to get user input...</p>
+<p>Means I'm saying <strong><em>"WTF?!"</em></strong>  <strong>a lot!</strong><br>
+I've used WTForms before. In django projects ...</p>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2>
+                    <a href="/blog/my-first-article">My First Article</a>
+                    <small>
+<footer class="post-info">
+    <div id="publish-info" class="publish-info-block">
+        <span class="published">
+            <i class="fa fa-calendar padding-small"></i><time datetime="2014-05-01T10:35:00"> 2014-05-01T10:35:00Z</time>
+        </span>
+        <span class="category">
+            <i class="fa fa-folder-open padding-small"></i><a href="/category/blog/">blog</a>
+        </span>
+    </div>
+</footer><!-- /.post-info -->                    </small>
+                </h2>
+                <div class="summary">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet.</p>
+<p>Let's test some syntax highlighting:</p>
+<div class="highlight"><pre><span class="nd">@hosts ...</span></pre></div>
+                </div>
+            </article>
+        <div class="text-center">
+            <ul class="pagination">
+                    <li class="prev disabled"><a href="#">&laquo;</a></li>
+                        <li class="active"><a
+                                href="/index.html">1</a></li>
+                        <li class=""><a
+                                href="/index2.html">2</a></li>
+                    <li class="next"><a
+                            href="/index2.html">&raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+            </div>
+<footer>
+    <div class="container-fluid">
+        <hr>
+        <div class="row">
+            <div class="col-xs-4 text-left">
+                
+            </div>
+            <div class="col-xs-8 text-right">
+                <p>Built using <a href="http://docs.getpelican.com/en/latest">Pelican</a>, <a href="getbootstrap.com">Bootstrap3</a> and the <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a> theme.</p>
+                <p>&copy; 2014 LCY</p>
+            </div>
+        </div>
+    </div>
+</footer>        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/theme/js/jquery-1.11.0.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+<script>
+    function FadeInOnScroll(ObjectList){
+        ObjectList.each(function(i) {
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_object ){
+                $(this).fadeTo(750,1);
+            }
+        });
+    }
 
-<!-- Footer -->
-<footer id="footer">
+    articles = $("article").fadeTo(0, 0.05);
+    FadeInOnScroll(articles)
 
-    <ul class="icons">
-        <li>
-          <a href="http://github.com/upperli" class="icon circle fa fa-github"><span class="label">github</span></a>
-        </li>
-    </ul>
-
-    <span class="copyright">&copy; Untitled. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
-
-</footer>
+    $(window).scroll(function() {
+        FadeInOnScroll(articles)
+    });
+</script>
 </body>
 </html>

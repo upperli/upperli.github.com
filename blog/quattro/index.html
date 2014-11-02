@@ -1,83 +1,194 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.dropotron.min.js"></script>
-    <script src="/js/skel.min.js"></script>
-    <script src="/js/skel-layers.min.js"></script>
-    <script src="/js/init.js"></script>
-    <link rel="stylesheet" href="/css/pygment.css" />
-    <noscript>
-        <link rel="stylesheet" href="/css/skel.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/style-noscript.css" />
-    </noscript>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link  href="http://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="LCY" />
+        <meta name="description" content="This should probably have something else... Let&#39;s test some syntax highlighting: @hosts(production) def publish(): local(&#39;pelican -s publishconf.py&#39;) ) Why didn&#39;t the damn icon show up." />
 
-    <title>Quattro | upperli </title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width">
+    <title>Quattro - upperli</title>
+
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    
+    <link href="/theme/css/pelican-twitchy.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="upperli ATOM Feed"/>
 </head>
-
-<body class=" loading">
-
-
-
-    <!-- Header -->
-    <header id="header" >
-        <h1 class="logo">
-            <a href="">upperli, design Twenty <span> by html5 up</span></a>
-        </h1>
-        <nav id="nav">
-            <ul>
-                <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/portfolio">Portfolio</a></li>
-                <li class="submenu">
-                    <a href="/blog">Blog</a>
-                    <ul>
-                            <li >
-                                <a href="/category/programming/">Programming</a>
-                            </li>
-                            <li >
-                                <a href="/category/recommendation/">recommendation</a>
-                            </li>
-                    </ul>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href="" title="upperli" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="/blog" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
                 </li>
-                <li><a href="#" class="button special">Sign Up</a></li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="http://github.com/upperli" title="github"><i class="fa fa-github-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        <div id="sidebar-wrapper">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            upperli
+                    </a>
+                </li>
+                    <li>
+                        <a href="/blog">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Social
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="http://github.com/upperli" title="github">
+                            <i class="fa fa-github-square fa-lg padding-small"></i>
+                            github
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="/about">
+                            <i class="fa fa-file-text padding-small"></i>
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/portfolio">
+                            <i class="fa fa-file-text padding-small"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li class="active">
+                        <a href="/category/blog/">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            blog
+                            <span class="badge pull-right categorybadge">4</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/category/programming/">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            Programming
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/category/recommendation/">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            recommendation
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
 
-<!-- Main -->
-<article id="main">
-
-  <header class="special container">
-    <span class="icon fa-bomb"></span>
-    <h2>Quattro</h2>
-    <!-- add page sub title here -->
-    <p>Posted on 2014-02-01T10:35:00Z by LCY</p>
-    <p>bomb</p>
-  </header>
-
-  <!-- One -->
-    <section class="wrapper style4 container">
-
-      <!-- Content -->
-        <div class="content">
-          <section>
-            <!-- <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a> -->
-            <h3>Posted in <a href="/category/blog/">blog</a></h3>
-            <p class="tags">
-</p>
-            <p><p>This should probably have something else...</p>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content">
+    <article>
+        <div class="row">
+            <div class="col-lg-12">
+                <header class="page-header">
+                    <h1>
+                        <a href="/blog/quattro"
+                           rel="bookmark"
+                           title="Permalink to Quattro">
+                            Quattro
+                        </a>
+                        <small>
+<footer class="post-info">
+    <div id="publish-info" class="publish-info-block">
+        <span class="published">
+            <i class="fa fa-calendar padding-small"></i><time datetime="2014-02-01T10:35:00"> 2014-02-01T10:35:00Z</time>
+        </span>
+        <span class="category">
+            <i class="fa fa-folder-open padding-small"></i><a href="/category/blog/">blog</a>
+        </span>
+    </div>
+</footer><!-- /.post-info -->                        </small>
+                    </h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="entry-content">
+                    <p>This should probably have something else...</p>
 <p>Let's test some syntax highlighting:</p>
 <div class="highlight"><pre><span class="nd">@hosts</span><span class="p">(</span><span class="n">production</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">publish</span><span class="p">():</span>
@@ -86,95 +197,75 @@
 </pre></div>
 
 
-<p>Why didn't the damn icon show up.</p></p>
-          </section>
-        </div>
+<p>Why didn't the damn icon show up.</p>
+                </div>
+                <footer class="text-right">
+                    <p>- LCY</p>
+                </footer>
+    <section id="comments" class="comments ">
+        <hr/>
+        <h2>Comments</h2>
 
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </section>
-
-    <!-- Two -->
-    <section class="wrapper style1 container special">
+            </div>
+        </div>
+    </article>
+</section>
+            </div>
+<footer>
+    <div class="container-fluid">
+        <hr>
         <div class="row">
-          <div class="4u">
-
-            <section>
-              <span class="icon feature fa-pied-piper-alt"></span>
-              <header>
-                <a href="/blog/seriously-wtform" rel='bookmark'><h3>Seriously WTForm</h3></a>
-              </header>
-              <p>I'm about neck deep into a large Flask application. It's an MVP so no over the top Angular frontend or anything. Means I'm using a lot of WTForm to get user input... Means I'm saying <st</p>
-              <footer>
-                  <ul class="buttons">
-                      <li><a href="/blog/seriously-wtform" class="button small">Read More</a></li>
-                  </ul>
-              </footer>
-            </section>
-
-          </div>
-          <div class="4u">
-
-            <section>
-              <span class="icon feature fa-automobile"></span>
-              <header>
-                <a href="/blog/my-first-article" rel='bookmark'><h3>My First Article</h3></a>
-              </header>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascet</p>
-              <footer>
-                  <ul class="buttons">
-                      <li><a href="/blog/my-first-article" class="button small">Read More</a></li>
-                  </ul>
-              </footer>
-            </section>
-
-          </div>
-          <div class="4u">
-
-            <section>
-              <span class="icon feature fa-building"></span>
-              <header>
-                <a href="/blog/the-second-article" rel='bookmark'><h3>The Second Article</h3></a>
-              </header>
-              <p>This should probably have something else... Let's test some syntax highlighting: @hosts(pro</p>
-              <footer>
-                  <ul class="buttons">
-                      <li><a href="/blog/the-second-article" class="button small">Read More</a></li>
-                  </ul>
-              </footer>
-            </section>
-
-          </div>
+            <div class="col-xs-4 text-left">
+                
+            </div>
+            <div class="col-xs-8 text-right">
+                <p>Built using <a href="http://docs.getpelican.com/en/latest">Pelican</a>, <a href="getbootstrap.com">Bootstrap3</a> and the <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a> theme.</p>
+                <p>&copy; 2014 LCY</p>
+            </div>
         </div>
-    </section>
-  </article>
-
-  <div id="comments">
-      <h2 class="space-above">Comments</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-          var disqus_identifier = "blog/quattro";
-          (function() {
-              var dsq = document.createElement('script');
-              dsq.type = 'text/javascript';
-              dsq.async = true;
-              dsq.src = 'http://frankvalcarcel.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-      </script>
-      <noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
-  </div>
+    </div>
+</footer>        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/theme/js/jquery-1.11.0.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 
 
-<!-- Footer -->
-<footer id="footer">
+<!-- disqus -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'frankvalcarcel'; // required: replace example with your forum shortname
 
-    <ul class="icons">
-        <li>
-          <a href="http://github.com/upperli" class="icon circle fa fa-github"><span class="label">github</span></a>
-        </li>
-    </ul>
+            var disqus_identifier = 'quattro';
+        var disqus_url = '/blog/quattro';
 
-    <span class="copyright">&copy; Untitled. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+    var disqus_config = function () {
+        this.language = "ch";
+    };
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
 
-</footer>
-</body>
+<!-- /disqus --></body>
 </html>

@@ -1,85 +1,198 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.dropotron.min.js"></script>
-    <script src="/js/skel.min.js"></script>
-    <script src="/js/skel-layers.min.js"></script>
-    <script src="/js/init.js"></script>
-    <link rel="stylesheet" href="/css/pygment.css" />
-    <noscript>
-        <link rel="stylesheet" href="/css/skel.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/style-noscript.css" />
-    </noscript>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link  href="http://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="LCY" />
+        <meta name="keywords" content="推荐算法，机器学习" />
+        <meta name="description" content="As the Netflix Prize competition has dem-onstrated, matrix factorization models are superior to classic nearest-neighbor techniques for producing product recom-mendations, allowing the incorporation of additional information such as implicit feedback, temporal effects, and confidence levels." />
 
-    <title>推荐系统中的矩阵分解技术（译） | upperli </title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width">
+    <title>推荐系统中的矩阵分解技术（译） - upperli</title>
+
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    
+    <link href="/theme/css/pelican-twitchy.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="upperli ATOM Feed"/>
 </head>
-
-<body class=" loading">
-
-
-
-    <!-- Header -->
-    <header id="header" >
-        <h1 class="logo">
-            <a href="">upperli, design Twenty <span> by html5 up</span></a>
-        </h1>
-        <nav id="nav">
-            <ul>
-                <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/portfolio">Portfolio</a></li>
-                <li class="submenu">
-                    <a href="/blog">Blog</a>
-                    <ul>
-                            <li >
-                                <a href="/category/programming/">Programming</a>
-                            </li>
-                            <li class="active">
-                                <a href="/category/recommendation/">recommendation</a>
-                            </li>
-                    </ul>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href="" title="upperli" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="/blog" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
                 </li>
-                <li><a href="#" class="button special">Sign Up</a></li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="http://github.com/upperli" title="github"><i class="fa fa-github-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        <div id="sidebar-wrapper">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            upperli
+                    </a>
+                </li>
+                    <li>
+                        <a href="/blog">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Social
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="http://github.com/upperli" title="github">
+                            <i class="fa fa-github-square fa-lg padding-small"></i>
+                            github
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="/about">
+                            <i class="fa fa-file-text padding-small"></i>
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/portfolio">
+                            <i class="fa fa-file-text padding-small"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li >
+                        <a href="/category/blog/">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            blog
+                            <span class="badge pull-right categorybadge">4</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/category/programming/">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            Programming
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/category/recommendation/">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            recommendation
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
 
-<!-- Main -->
-<article id="main">
-
-  <header class="special container">
-    <span class="icon fa-"></span>
-    <h2>推荐系统中的矩阵分解技术（译）</h2>
-    <!-- add page sub title here -->
-    <p>Posted on 2010-12-03T10:20:00Z by LCY</p>
-    <p></p>
-  </header>
-
-  <!-- One -->
-    <section class="wrapper style4 container">
-
-      <!-- Content -->
-        <div class="content">
-          <section>
-            <!-- <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a> -->
-            <h3>Posted in <a href="/category/recommendation/">recommendation</a></h3>
-            <p class="tags">
-                <a href="/tag/tui-jian-suan-fa-ji-qi-xue-xi/">推荐算法，机器学习</a>
-</p>
-            <p><h1>推荐系统中的矩阵分解技术（译）</h1>
-<h6>Yehuda Koren,  Yahoo Research ；</h6>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content">
+    <article>
+        <div class="row">
+            <div class="col-lg-12">
+                <header class="page-header">
+                    <h1>
+                        <a href="/blog/recommendation001"
+                           rel="bookmark"
+                           title="Permalink to 推荐系统中的矩阵分解技术（译）">
+                            推荐系统中的矩阵分解技术（译）
+                        </a>
+                        <small>
+<footer class="post-info">
+    <div id="publish-info" class="publish-info-block">
+        <span class="published">
+            <i class="fa fa-calendar padding-small"></i><time datetime="2014-11-02T10:20:00"> 2014-11-02T10:20:00Z</time>
+        </span>
+        <span class="category">
+            <i class="fa fa-folder-open padding-small"></i><a href="/category/recommendation/">recommendation</a>
+        </span>
+        <span class="tags">
+            <i class="fa fa-tags padding-small"></i>
+            <a href="/tag/tui-jian-suan-fa-ji-qi-xue-xi/">推荐算法，机器学习</a>        </span>
+    </div>
+</footer><!-- /.post-info -->                        </small>
+                    </h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="entry-content">
+                    <h6>Yehuda Koren,  Yahoo Research ；</h6>
 <h6>Robert Bell and Chris Volinsky,  AT&amp;T Labs—Research</h6>
 <h6>LCY（译）</h6>
 <blockquote>
@@ -87,105 +200,85 @@
 </blockquote>
 <p>当代消费者面临着过量的选择。电子零售商和供应商提供了大量的产品选择，以及前所未有的机会来满足各种不同的需求和喜好。在消费者和最恰当的产品之间牵桥搭线是提高用户满意度和忠诚度的关键。因此，越来越多的零售商开始对<strong>推荐系统</strong>感兴趣，这种系统能分析用户在产品中的兴趣来提供个性化的满足用户喜好的推荐。因为好的推荐系统能让用户体验上升一个层次，推荐系统已经成了像 Amazon.com 和 Netflix 等电子商务大佬网站中非常重要的一部分。</p>
 <p>推荐系统对于娱乐产品像如电影，音乐和电视节目等的效果格外显著。许多消费者会观看相同的电影，每个消费者也可能去观看许多不同的电影。已经证明消费者愿意表明自己对电影的满意程度，所以哪个用户喜欢哪部电影这样的数据是大量的并且是可获得的。公司可以分析这些数据来给特定的用户推荐电影。</p>
-<h2>推荐系统策略</h2>
+<h1>推荐系统策略</h1>
 <p>广泛的讲，推荐系统主要基于两种策略之一。<strong>内容过滤</strong>方法为每个用户或者产品创建一个配置文件来描述它的本质。举个例子来说，一个电影的配置文件可能包含它的类型，参与演员，票房等等属性。用户的配置文件可能包含户口资料信息或者对于恰当问卷的调查信息。这些配置文件允许程序将用户和产片关联起来。当然，基于内容的策略需要集成的表面信息可能不那么容易收集甚至不可获得。</p>
 <p>一个成功的内容过滤的案例是著名的 Music Genome Project ，这个项目被用于 Pandora.com 的网络音频服务。一个训练有素的音乐分析师为 Music Genome Project 上的每首歌曲的数以百计的显著音乐特征打分。这些属性不仅是一首歌的音乐特性，而且还是和理解听者音乐喜好的有重大联系的特征品质。</p>
 <p>相对于内容过滤的另一种可选择的方式是依赖用户的过去的行为，如以前的交易或者产品打分，这样就不需要创建明确的配置文件。这种方式被称作<strong>协同过滤</strong> ---由第一个推荐系统的开发人员命名的术语。协同过滤分析用户和产品互赖之间的关系来确定新的用户--产品关联。</p>
 <p>协同过滤算法的一个主要的吸引力是它在域间的开放，它能解决使用内容过滤通常难于理解和描述的数据问题。在比基于内容的技术更加精确的同时，协同过滤算法也有自己的问题，那就是<strong>冷启动</strong>问题，因为它对系统的新产品和新用户无能为力。从这个角度讲，内容过滤要更胜一筹。</p>
-<p><img alt="FIgure 1" src="/images/recommendation001_1.png" />
-　　协同过滤算法的两个基本领域是基于邻域的方法和隐语义模型。基于邻域的方法专注于计算物品间的或者用户间的关系之一。面向物品的方法基于相同用户对邻居物品的发奋来导出用户对某个物品的喜好。一个产品的邻居是对于同一用户会获得相似打分的物品。例如，《拯救大兵瑞恩》的邻居可能其他电影中包含战争电影，<em>斯皮尔伯格</em>的电影和<em>汤姆·汉克斯</em>的电影。为了预测一个特定用户对《拯救大兵瑞恩》的评分，我们可能要这个用户对查看最邻近电影的实际打分。正如图1所示，面向用户的方法识别思维类似的用户来互相完成他人的评分。</p>
+<p><img alt="Alt Figure1" src="http://ww3.sinaimg.cn/large/ace0c3edgw1elr7g4npjkj20ar0b3wfp.jpg" />图一</p>
+<p>协同过滤算法的两个基本领域是基于邻域的方法和隐语义模型。基于邻域的方法专注于计算物品间的或者用户间的关系之一。面向物品的方法基于相同用户对邻居物品的发奋来导出用户对某个物品的喜好。一个产品的邻居是对于同一用户会获得相似打分的物品。例如，《拯救大兵瑞恩》的邻居可能其他电影中包含战争电影，<em>斯皮尔伯格</em>的电影和<em>汤姆·汉克斯</em>的电影。为了预测一个特定用户对《拯救大兵瑞恩》的评分，我们可能要这个用户对查看最邻近电影的实际打分。正如图1所示，面向用户的方法识别思维类似的用户来互相完成他人的评分。</p>
 <p>隐语义模型是另一种方法，它试图通过同时解释物品和用户的特征来给物品评分，这些特征应当是从评分中推断出来的20到100个因素。在某种意义上，这些因素构成一个计算体系来代替人工的歌曲分析。对于电影来说，已知的因素可以被显而易见的维度测量，例如喜剧对应话剧，演员的数量，亦或是面向儿童的；不好定义的方面像个性的发展和离奇的程度，或者完全无法描述的维度。对于用户来说，每个方面衡量用户在相应电影因素上的感冒程度。</p>
-<p><img alt="FIgure 2" src="" />
-　　图二用一个简单地两个维度上的例子阐明了这个观点。考虑两个假设的维度：面向女性的对应面向男性的和严肃的对应荒诞的。对于这个模型，一个用户对一部电影的评分预测，和电影的平均得分有关，它等于电影和用户在图上位置的点乘。举个例子来说，我们会预测<em>Gus</em>喜欢《阿呆和阿瓜》，讨厌《紫颜色》，对《勇敢的心》兴致平平。值得注意的是，许多电影如《11罗汉》和用户例如<em>Dave</em>将会在这两个维度上表现的十分中性化。</p>
-<h2>矩阵分解方法</h2></p>
-          </section>
-        </div>
+<p><img alt="Alt Figure2" src="http://ww4.sinaimg.cn/large/ace0c3edgw1elr7i7nlxhj20e00ch75l.jpg" />图二</p>
+<p>图二用一个简单地两个维度上的例子阐明了这个观点。考虑两个假设的维度：面向女性的对应面向男性的和严肃的对应荒诞的。对于这个模型，一个用户对一部电影的评分预测，和电影的平均得分有关，它等于电影和用户在图上位置的点乘。举个例子来说，我们会预测<em>Gus</em>喜欢《阿呆和阿瓜》，讨厌《紫颜色》，对《勇敢的心》兴致平平。值得注意的是，许多电影如《11罗汉》和用户例如<em>Dave</em>将会在这两个维度上表现的十分中性化。</p>
+<h1>矩阵分解方法</h1>
+                </div>
+                <footer class="text-right">
+                    <p>- LCY</p>
+                </footer>
+    <section id="comments" class="comments ">
+        <hr/>
+        <h2>Comments</h2>
 
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </section>
-
-    <!-- Two -->
-    <section class="wrapper style1 container special">
+            </div>
+        </div>
+    </article>
+</section>
+            </div>
+<footer>
+    <div class="container-fluid">
+        <hr>
         <div class="row">
-          <div class="4u">
-
-            <section>
-              <span class="icon feature fa-pied-piper-alt"></span>
-              <header>
-                <a href="/blog/seriously-wtform" rel='bookmark'><h3>Seriously WTForm</h3></a>
-              </header>
-              <p>I'm about neck deep into a large Flask application. It's an MVP so no over the top Angular frontend or anything. Means I'm using a lot of WTForm to get user input... Means I'm saying <st</p>
-              <footer>
-                  <ul class="buttons">
-                      <li><a href="/blog/seriously-wtform" class="button small">Read More</a></li>
-                  </ul>
-              </footer>
-            </section>
-
-          </div>
-          <div class="4u">
-
-            <section>
-              <span class="icon feature fa-automobile"></span>
-              <header>
-                <a href="/blog/my-first-article" rel='bookmark'><h3>My First Article</h3></a>
-              </header>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascet</p>
-              <footer>
-                  <ul class="buttons">
-                      <li><a href="/blog/my-first-article" class="button small">Read More</a></li>
-                  </ul>
-              </footer>
-            </section>
-
-          </div>
-          <div class="4u">
-
-            <section>
-              <span class="icon feature fa-building"></span>
-              <header>
-                <a href="/blog/the-second-article" rel='bookmark'><h3>The Second Article</h3></a>
-              </header>
-              <p>This should probably have something else... Let's test some syntax highlighting: @hosts(pro</p>
-              <footer>
-                  <ul class="buttons">
-                      <li><a href="/blog/the-second-article" class="button small">Read More</a></li>
-                  </ul>
-              </footer>
-            </section>
-
-          </div>
+            <div class="col-xs-4 text-left">
+                
+            </div>
+            <div class="col-xs-8 text-right">
+                <p>Built using <a href="http://docs.getpelican.com/en/latest">Pelican</a>, <a href="getbootstrap.com">Bootstrap3</a> and the <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a> theme.</p>
+                <p>&copy; 2014 LCY</p>
+            </div>
         </div>
-    </section>
-  </article>
-
-  <div id="comments">
-      <h2 class="space-above">Comments</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-          var disqus_identifier = "blog/recommendation001";
-          (function() {
-              var dsq = document.createElement('script');
-              dsq.type = 'text/javascript';
-              dsq.async = true;
-              dsq.src = 'http://frankvalcarcel.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-      </script>
-      <noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
-  </div>
+    </div>
+</footer>        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/theme/js/jquery-1.11.0.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 
 
-<!-- Footer -->
-<footer id="footer">
+<!-- disqus -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'frankvalcarcel'; // required: replace example with your forum shortname
 
-    <ul class="icons">
-        <li>
-          <a href="http://github.com/upperli" class="icon circle fa fa-github"><span class="label">github</span></a>
-        </li>
-    </ul>
+            var disqus_identifier = 'recommendation001';
+        var disqus_url = '/blog/recommendation001';
 
-    <span class="copyright">&copy; Untitled. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+    var disqus_config = function () {
+        this.language = "ch";
+    };
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
 
-</footer>
-</body>
+<!-- /disqus --></body>
 </html>
