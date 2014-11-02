@@ -33,8 +33,8 @@ $$ \min _{q^*,p^*} \sum _{(u,i) \in \kappa} (r_{ui} - q_i^Tp_u)^2 + \lambda( \le
 &lt;h3&gt;随机梯度下降法&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Simon Funk&lt;/em&gt;普及了公式（2）的梯度下降最优化问题（http://sifter.org/~simon/
 journal/20061211.html）在这个算法中遍历训练集中的所有数据。对于每一个训练样例，系统预测 $r_{ui}$ 并且计算预测误差：$$e_{ui} \overset{def}{=} r_{ui} - q_i^Tp_u$$.&lt;/p&gt;
-&lt;p&gt;然后它在向梯度的反方向按照$\gamma$的比例大小来调整参数，产生：
-&lt;em&gt;$q_i \leftarrow q_u +\gamma \cdot(e_{ui}\cdot p_u-\lamdba \cdot q_i)$
+&lt;p&gt;然后它在向梯度的反方向按照$\gamma$的比例大小来调整参数，产生：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;$q_i \leftarrow q_u +\gamma \cdot(e_{ui}\cdot p_u-\lambda \cdot q_i)$
 &lt;/em&gt;$p_u \leftarrow p_u +\gamma \cdot(e_{ui}\cdotp_u-\gamma \cdot q_i - \lambda \cdot p_u)$&lt;/p&gt;
 &lt;p&gt;这种方法既容易实现又速度快，但是在许多情况下，最好还是使用ALS。&lt;/p&gt;
 &lt;h3&gt;交替最小二乘法&lt;/h3&gt;
