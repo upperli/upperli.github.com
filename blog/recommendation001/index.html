@@ -212,8 +212,8 @@ $$ \min _{q^*,p^*} \sum _{(u,i) \in \kappa} (r_{ui} - q_i^Tp_u)^2 + \lambda( \le
 <h2>学习算法</h2>
 <p>有两种方法来最小化公式（2），<strong>随机梯度下降</strong>和<strong>交替最小二乘法（ALS）</strong></p>
 <h3>随机梯度下降法</h3>
-<p><em>Simon Funk</em>普及了公式（2）的梯度下降最优化问题（http://sifter.org/~simon/
-journal/20061211.html）在这个算法中遍历训练集中的所有数据。对于每一个训练样例，系统预测 $r_{ui}$ 并且计算预测误差：$$e_{ui} \overset{def}{=} r_{ui} - q_i^Tp_u$$.</p>
+<p><em>Simon Funk</em>普及了公式（2）的<a href="http://sifter.org/~simon/
+journal/20061211.html">梯度下降最优化问题</a>在这个算法中遍历训练集中的所有数据。对于每一个训练样例，系统预测 $r_{ui}$ 并且计算预测误差：$$e_{ui} \overset{def}{=} r_{ui} - q_i^Tp_u$$.</p>
 <p>然后它在向梯度的反方向按照$\gamma$的比例大小来调整参数，产生：</p>
 <p><em>$q_i \leftarrow q_u +\gamma \cdot(e_{ui}\cdot p_u-\lambda \cdot q_i)$
 </em>$p_u \leftarrow p_u +\gamma \cdot(e_{ui}\cdotp_u-\gamma \cdot q_i - \lambda \cdot p_u)$</p>
@@ -227,20 +227,31 @@ journal/20061211.html）在这个算法中遍历训练集中的所有数据。�
 <p>在$r_{ui}$中的偏差值被表示作$b_{ui}$，并且受用户和物品的影响。全局平均值被表示为$\mu$，参数$b_u$和$b_i$分别表示用户u和物品i相对于平均值的差异。举例来说，假设你想要计算用户 Joe 对电影 《泰坦尼克号》的一阶估计，假设多有电影的平均评分$\mu$是3.7星。此外，《泰坦尼克号》比平均水平的电影要好，所以比平均值高0.5星。另一方面，Joe是一个挑剔的用户，他打分比平均打分要低0.3分。因此，Joe 对《泰坦尼克号》的估计值是3.9星（3.7+0.5-0.3）。公式（1）扩展了偏差值后变成：$$\hat{r}_{ui}=\mu+b_i+b_u+q_i^tp_u \qquad (4)$$</p>
 <p>到这里，评分被分解成了四部分：全局平均值，物品偏差，用户偏差，和用户--物品相互作用。这就允许各个部分只解释和它相关的那部分。系统通过最小化如下方差函数来进行学习：$$\min _{p^*,q^*,b^*} \sum _{(u,i) \in \kappa} (r_{ui} - \mu - b_i - b_u - p_uTq_i)^2 + \lambda(\left \| q_i \right \|^2+ \left \| p_u \right \|^2 + b_u^2 + b_i^2)\qquad(5)$$</p>
 <p>因为偏差趋向于捕获许多观察到的信号，其精确建模时至关重要的。因此，有研究提出了更复杂的偏差模型。</p>
-<h2>额外的输入来源aa</h2>
+<h2>额外的输入来源</h2>
                 </div>
                 <footer class="text-right">
                     <p>- LCY</p>
                 </footer>
-    <section id="comments" class="comments ">
-        <hr/>
-        <h2>Comments</h2>
 
-        <div id="disqus_thread"></div>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </section>
+    <section id="comments" class="comments">
+    <!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key= recommendation001 data-title=推荐系统中的矩阵分解技术（译） data-url= blog/{slug}></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"upperli"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+  </section>
+
             </div>
         </div>
     </article>
