@@ -26,6 +26,14 @@
     <!-- Feeds -->
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="upperli ATOM Feed"/>
+	
+	<!-- MathJax -->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
 </head>
 <body data-spy="scroll" data-target="#scrollspy">
     <div id="wrapper">
@@ -233,6 +241,7 @@
         <!-- /#page-content-wrapper -->
     </div>
     <!-- /#wrapper -->
+	
     <!-- jQuery Version 1.11.0 -->
     <script src="/theme/js/jquery-1.11.0.js"></script>
     <!-- Bootstrap Core JavaScript -->
